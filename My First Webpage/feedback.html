@@ -4,61 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feedback</title>
+
+  <link rel="stylesheet" href="style.css" />
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background: black;
-      color: white;
+    form {
+      margin-top: 20px;
     }
-    nav { margin-bottom: 30px; }
-    nav a {
-      margin-right: 15px;
-      color: pink;
-      text-decoration: none;
+
+    label {
+      display: block;
+      margin-top: 15px;
       font-weight: bold;
+      color: pink;
     }
-    nav a:hover { color: pink; }
-    h1 { color: pink; }
-    label { display: block; margin-top: 15px; font-weight: bold; color: pink; }
-    input[type="text"], input[type="email"], select, textarea {
+
+    input,
+    select,
+    textarea {
       width: 100%;
       padding: 8px;
       margin-top: 5px;
-      box-sizing: border-box;
       background: black;
       color: white;
       border: 1px solid pink;
       border-radius: 4px;
+      box-sizing: border-box;
     }
-    input:focus, select:focus, textarea:focus {
-      outline: none;
-      border-color: pink;
-    }
-    .radio-group, .check-group { margin-top: 8px; }
-    .radio-group label, .check-group label {
-      font-weight: normal;
-      color: white;
-      display: inline;
-      margin-left: 5px;
-    }
-    select option { background: black; }
+
     button {
       margin-top: 20px;
       padding: 10px 25px;
       background: pink;
       color: black;
       border: none;
-      cursor: pointer;
       border-radius: 4px;
+      cursor: pointer;
       font-weight: bold;
-      font-size: 1rem;
     }
-    button:hover { background: pink; }
   </style>
 </head>
+
 <body>
 
   <nav>
@@ -69,54 +55,20 @@
 
   <h1>Feedback Form</h1>
 
+  <div class="highlight">
+    Please share your feedback with us.
+  </div>
+
   <form>
 
     <label for="name">Full Name *</label>
-    <input type="text" id="name" name="name"
-      placeholder="Enter your full name"
-      required minlength="3" maxlength="80" />
+    <input type="text" id="name" required />
 
     <label for="email">Email Address *</label>
-    <input type="email" id="email" name="email"
-      placeholder="you@example.com"
-      required />
+    <input type="email" id="email" required />
 
-    <label>Rating *</label>
-    <div class="radio-group">
-      <input type="radio" name="rating" value="very_satisfied" required />
-      <label>Very Satisfied</label><br />
-      <input type="radio" name="rating" value="satisfied" />
-      <label>Satisfied</label><br />
-      <input type="radio" name="rating" value="neutral" />
-      <label>Neutral</label><br />
-      <input type="radio" name="rating" value="unsatisfied" />
-      <label>Unsatisfied</label>
-    </div>
-
-    <label>Interests</label>
-    <div class="check-group">
-      <input type="checkbox" name="interest" value="web" />
-      <label>Web Development</label><br />
-      <input type="checkbox" name="interest" value="mobile" />
-      <label>Mobile Development</label><br />
-      <input type="checkbox" name="interest" value="ai" />
-      <label>AI &amp; Machine Learning</label>
-    </div>
-
-    <label for="country">Country *</label>
-    <select id="country" name="country" required>
-      <option value="" disabled selected>Select your country</option>
-      <option value="NP">Nepal</option>
-      <option value="IN">India</option>
-      <option value="US">China</option>
-      <option value="other">Other</option>
-    </select>
-
-    <label for="message">Write your feedback here *</label>
-    <textarea id="message" name="message"
-      placeholder="Share your thoughts…"
-      required minlength="10" maxlength="1000"
-      rows="5"></textarea>
+    <label for="message">Feedback *</label>
+    <textarea id="message" rows="5"></textarea>
 
     <button type="submit">Submit</button>
 
@@ -124,3 +76,5 @@
 
 </body>
 </html>
+
+
