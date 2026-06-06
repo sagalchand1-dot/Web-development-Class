@@ -6,6 +6,8 @@ if(age>=18) {
     console.log("You are not an adult");
 }
 
+let is_adult = age >=18? "You are an adult": "You are not an adult";
+
 let marks =85;
 
 if (marks>=90) {
@@ -58,6 +60,11 @@ switch (test_day) {
 
 
 
-for (let i = 0; i <= 4; i++) {
-    console.log(i + 1);
+for (let i = 0; i <= 5; i++) {
+    if (i===3) {
+        break;
+        continue;
+    }
+    console.log(i);
 }
+
