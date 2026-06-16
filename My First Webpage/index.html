@@ -1,114 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to My First Webpage</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
 
-  <!-- Bootstrap 5 CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
 
-  <style>
-    .inline-example {
-      text-align: center;
-    }
-  </style>
+    <!-- Bootstrap 5 CDN -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <style>
+        .task-box {
+            margin: 30px auto;
+            max-width: 700px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .output {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+        }
+
+        #color-display {
+            width: 100%;
+            height: 120px;
+            background-color: pink;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- BOOTSTRAP NAVBAR -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">MySite</a>
+        <a class="navbar-brand" href="index.html">MySite</a>
 
-      <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#navMenu"
-              aria-controls="navMenu" aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="feedback.html">Feedback</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="photos.html">Photos</a>
-          </li>
-        </ul>
-      </div>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="photos.html">Photos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="js-tasks.html">
+                        JS Tasks
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
-  <!-- ORIGINAL CONTENT -->
-  <div class="main-content">
+<br><br><br><br>
 
-    <div class="important-box">
-      Important
-    </div>
+<div class="container">
 
-    <h1 id="special-heading">Welcome to My First Webpage</h1>
+    <h1 class="text-center mb-4">JavaScript Tasks</h1>
 
-    <p class="highlight">
-      Hi! I'm <span class="highlight-text">Sagal Chand</span>, a student learning web development.
-    </p>
+    <!-- Task 1 -->
+    <div class="task-box">
+        <h3>Task 1: Even or Odd Checker</h3>
 
-    <p>
-      I enjoy building simple projects and improving my skills every day.
-      I'm currently studying HTML and CSS as my first step.
-    </p>
+        <input type="number" id="eo-input" class="form-control"
+               placeholder="Enter a number">
 
-    <hr />
+        <br>
 
-    <h2 class="sticky-heading">My Hobbies</h2>
+        <button class="btn btn-primary"
+                onclick="checkEvenOdd()">
+            Check
+        </button>
 
-    <ol>
-      <li>Singing</li>
-      <li>Playing guitar</li>
-      <li>Hiking on weekends</li>
-    </ol>
-
-    <h2>Favourite Foods</h2>
-
-    <ul>
-      <li><u>Momo</u></li>
-      <li><em>Keema Noodles</em></li>
-      <li><strong>Pizza</strong></li>
-    </ul>
-
-    <div class="content-box">
-      This box uses the CSS Box Model properties.
+        <div class="output" id="eo-output"></div>
     </div>
 
-    <p style="color: lightblue;">
-      This paragraph uses inline CSS.
-    </p>
+    <!-- Task 2 -->
+    <div class="task-box">
+        <h3>Task 2: Multiplication Table</h3>
 
-    <p class="inline-example">
-      This paragraph uses internal CSS.
-    </p>
+        <input type="number" id="mt-input"
+               class="form-control"
+               placeholder="Enter a number">
 
-    <h2>More About Me</h2>
+        <br>
 
-    <p>I love exploring new technologies and creating creative projects.</p>
-    <p>Web development helps me improve my design and coding skills.</p>
-    <p>I enjoy learning CSS animations and responsive design techniques.</p>
-    <p>My goal is to become a professional web developer in the future.</p>
-    <p>I also enjoy music, traveling, and outdoor adventures with friends.</p>
+        <button class="btn btn-primary"
+                onclick="generateTable()">
+            Generate
+        </button>
 
-    <a href="about.html">Go to About Me →</a>
+        <div class="output" id="mt-output"></div>
+    </div>
 
-  </div>
+    <!-- Task 3 -->
+    <div class="task-box">
+        <h3>Task 3: FizzBuzz</h3>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <button class="btn btn-primary"
+                onclick="runFizzBuzz()">
+            Run FizzBuzz
+        </button>
+
+        <div class="output" id="fb-output"></div>
+    </div>
+
+    <!-- Task 4 -->
+    <div class="task-box">
+        <h3>Task 4: Square Pattern</h3>
+
+        <input type="number"
+               id="sq-input"
+               class="form-control"
+               placeholder="Enter n">
+
+        <br>
+
+        <button class="btn btn-primary"
+                onclick="drawSquare()">
+            Draw
+        </button>
+
+        <div class="output" id="sq-output"></div>
+    </div>
+
+    <!-- Task 5 -->
+    <div class="task-box">
+        <h3>Task 5: Right-Angled Triangle</h3>
+
+        <input type="number"
+               id="tri-input"
+               class="form-control"
+               placeholder="Enter n">
+
+        <br>
+
+        <button class="btn btn-primary"
+                onclick="drawTriangle()">
+            Draw
+        </button>
+
+        <div class="output" id="tri-output"></div>
+    </div>
+
+    <!-- Task 6 -->
+    <div class="task-box">
+        <h3>Task 6: Dynamic Color Changer</h3>
+
+        <div id="color-display"></div>
+
+        <input type="color"
+               id="color-picker"
+               value="#ffb6c1">
+
+        <span id="color-hex">#ffb6c1</span>
+
+        <button class="btn btn-secondary"
+                onclick="resetColor()">
+            Reset
+        </button>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript -->
+<script>
+
+  //Task 1 Even or Odd Checker
+function checkEvenOdd() {
+    const num = parseInt(document.getElementById("eo-input").value);
+
+    if (isNaN(num)) {
+        document.getElementById("eo-output").textContent =
+            "Please enter a valid number.";
+        return;
+    }
+
+    document.getElementById("eo-output").textContent =
+        (num % 2 === 0)
+        ? num + " is an even number."
+        : num + " is an odd number.";
+}
+
+//Task 2 Multiplication Table Generator (Using Loops)
+function generateTable() {
+    const num = parseInt(document.getElementById("mt-input").value);
+
+    if (isNaN(num)) {
+        document.getElementById("mt-output").textContent =
+            "Please enter a valid number.";
+        return;
+    }
+
+    let result = "";
+
+    for (let i = 1; i <= 10; i++) {
+        result += `${num} × ${i} = ${num * i}\n`;
+    }
+
+    document.getElementById("mt-output").textContent = result;
+}
+
+// Task 3 FizzBuzz Challenge
+function runFizzBuzz() {
+    let result = "";
+
+    for (let i = 1; i <= 20; i++) {
+        if (i % 15 === 0) {
+            result += "FizzBuzz\n";
+        } else if (i % 3 === 0) {
+            result += "Fizz\n";
+        } else if (i % 5 === 0) {
+            result += "Buzz\n";
+        } else {
+            result += i + "\n";
+        }
+    }
+
+    document.getElementById("fb-output").textContent = result;
+}
+
+// Task 4 Square Pattern
+function drawSquare() {
+    const n = parseInt(document.getElementById("sq-input").value);
+
+    if (isNaN(n) || n <= 0) {
+        document.getElementById("sq-output").textContent =
+            "Enter a positive number.";
+        return;
+    }
+
+    let result = "";
+
+    for (let i = 0; i < n; i++) {
+        result += "*".repeat(n) + "\n";
+    }
+
+    document.getElementById("sq-output").textContent = result;
+}
+
+// Task 5 Right-Angled Triangle
+function drawTriangle() {
+    const n = parseInt(document.getElementById("tri-input").value);
+
+    if (isNaN(n) || n <= 0) {
+        document.getElementById("tri-output").textContent =
+            "Enter a positive number.";
+        return;
+    }
+
+    let result = "";
+
+    for (let i = 1; i <= n; i++) {
+        result += "*".repeat(i) + "\n";
+    }
+
+    document.getElementById("tri-output").textContent = result;
+}
+
+//Tsk 6 Right-Angled Triangle
+const DEFAULT_COLOR = "pink";
+
+const colorPicker = document.getElementById("color-picker");
+const colorDisplay = document.getElementById("color-display");
+const colorHex = document.getElementById("color-hex");
+
+colorPicker.addEventListener("input", function () {
+    colorDisplay.style.backgroundColor = this.value;
+    colorHex.textContent = this.value;
+});
+
+function resetColor() {
+    colorDisplay.style.backgroundColor = DEFAULT_COLOR;
+    colorPicker.value = DEFAULT_COLOR;
+    colorHex.textContent = DEFAULT_COLOR;
+}
+</script>
+
 </body>
 </html>
